@@ -1,0 +1,266 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Contact: Contact CSS Styles */
+
+/* Basic Styles */
+
+@font-face {
+    font-family: 'Boston';
+    src: url(fonts/boston.ttf);
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: white;
+    padding-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+}
+
+.divider {
+    background: url(divider1.png) center top / cover no-repeat;
+    width: 100%;
+    height: 9rem;
+    margin-top: -4rem;
+}
+
+
+/* Navbar Styles */
+
+.navbar {
+    box-shadow: grey 0px 1px 10px 1px;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.navbar-brand h3 {
+    font-family: 'Boston', 'Times New Roman', serif;
+    padding-top: 1rem;
+    color: #078039;
+}
+
+.nav-item a:hover {
+    color: #078039;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    position: absolute;
+    background-color: #078039;
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    box-shadow: lightslategrey 2px 2px 10px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+/* Section 1: Title */
+
+.title {
+    background: url(bg.png);
+    text-align: center;
+}
+
+.title .row {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.title .col {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title .col {
+    margin-right: -3rem;
+}
+
+/* Section 2: Catering */
+
+.catering {
+    background-color: #078039;
+    color: white;
+}
+
+.catering .catering-img {
+    background: url(images/contact/side1.jpg) center center / cover no-repeat;
+}
+
+/* .catering-form .row {
+    margin: 20px 0;
+} */
+
+.catering-form .col {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.catering-pax, .catering-amenities {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.catering-pax div, .catering-amenities div {
+    padding: 0px 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 0;
+    outline: 2px solid lightgrey;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #F6B41F;
+}
+
+.c-pax, .c-amen, .c-pax:focus, .c-amen:focus {
+    outline: none;
+}
+
+.catering-form-buttons {
+    display: flex;
+    justify-content: end;
+}
+
+.catering-form-buttons * {
+    margin: 10px;
+}
+
+/* Section 3: General Inquiries */
+
+.inquiries {
+    background-color: #F6B41F;
+}
+
+.inquiries .inquiries-img {
+    background: url(images/contact/side2.jpg) center center / cover no-repeat;
+}
+
+.inquiries-form .col {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.inquiries input, .inquiries select, textarea {
+    padding: 10px;
+    border: 0;
+    outline: 2px solid lightgrey;
+}
+
+.inquiries input:focus, .inquiries select:focus, textarea:focus {
+    outline: 2px solid #0AC257;
+}
+
+.inquiries-form-buttons {
+    display: flex;
+    justify-content: end;
+}
+
+.inquiries-form-buttons * {
+    margin: 10px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #F9EDD7;
+    margin-top: 0;
+    border-top: 2px solid #078039;
+    color: #6B4822;
+}
+
+footer a {
+    text-decoration: none;
+    color: #6B4822;
+}
+
+.list ul {
+    list-style-type: circle;
+    padding: 0rem 1rem;
+}
+
+footer a:hover {
+    color: #F6B41F;
+    transition: 0.35s ease;
+}
+
+.credits p {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+footer .icon {
+    display: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+
+    footer .map * {
+        text-align: center;
+    }
+
+    footer li, footer .info {
+        display: none;
+    }
+
+    footer .icon {
+        display: flex;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+    }
+
+    footer .icon .col-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .history-title {
+        text-align: center;
+    }
+
+    .history img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    footer .info li:nth-of-type(3) {
+        font-size: 0.9rem;
+    }
+}
